@@ -62,28 +62,46 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
       html {
-        background: url("images/background.png") no-repeat center fixed;
         background-size: cover;
+        background-image: url("images/background.png");
+        color: #444444;
       }
       h1 {
         font-family: "Inter", sans-serif;
-        color: #444444;
         font-size: 32px;
       }
       h2 {
         font-family: "Inter", sans-serif;
-        color: #444444;
         font-size: 24px;
         margin: 50px 30px;
       }
       p {
         font-family: "Inter", sans-serif;
-        color: #444444;
         line-height: 30px;
       }
       .section {
         width: 325px;
         margin: auto;
+        position: relative;
+      }
+      .inhoud {
+        background: rgba(255, 255, 255, 0.80);
+        margin:auto;
+      }
+      .img-stack1 {
+        position:absolute;
+        z-index: 1;
+      }
+      .img-stack2 {
+        position:absolute;
+        top: 180px;
+        left: 180px;
+        z-index: 3;
+      }
+      .img-stack3 {
+        position:absolute;
+        top: 310px;
+        z-index: 2;
       }
     </style>
     <noscript
@@ -98,44 +116,49 @@
     >
   </head>
   <body>
-    <div class="section">
-      <h1>Wie is spongebob</h1>
-      <amp-img
-        src="https://source.unsplash.com/random/400x300"
-        width="325"
-        height="200"
-      ></amp-img>
-    </div>
-    <div class="section">
-      <h2>Lorem ipsum sit damet test spongebob patrick test</h2>
-
-      <p>
-        Vestibulum sit nibh. Et aliquam dolor. Sodales ac dui. Sed erat lacinia
-        maecenas fusce accumsan vehicula aliquam nibh lorem dolor nulla.
-        Facilisi quis tellus. Ut id sed. Porttitor habitant viverra proident
-        scelerisque duis duis et turpis. Integer est condimentum. Suscipit nulla
-        integer. Phasellus facilis vestibulum. Con pellentesque sed. Urna in
-        risus sem fusce suscipit. In sed integer. Imperdiet mauris sit. Pretium
-        vitae in. Fusce et vehicula. Nibh a aliquam. Proin massa posuere. Quis
-        pulvinar vehicula.
-      </p>
-    </div>
-    <div class="section">
-      <amp-img
-        src="https://source.unsplash.com/random/400x300"
-        width="325"
-        height="200"
-      ></amp-img>
-      <amp-img
-        src="https://source.unsplash.com/random/200x200"
-        width="150"
-        height="150"
-      ></amp-img>
-      <amp-img
-        src="https://source.unsplash.com/random/400x400"
-        width="250"
-        height="200"
-      ></amp-img>
+    <div class="inhoud">
+      <div class="section">
+        <h1>Wie is spongebob</h1>
+        <amp-img
+          src="./images/spongebob.jpg"
+          width="325"
+          height="200"
+        ></amp-img>
+      </div>
+      <div class="section">
+        <h2>Lorem ipsum sit damet test spongebob patrick test</h2>
+  
+        <p>
+          Vestibulum sit nibh. Et aliquam dolor. Sodales ac dui. Sed erat lacinia
+          maecenas fusce accumsan vehicula aliquam nibh lorem dolor nulla.
+          Facilisi quis tellus. Ut id sed. Porttitor habitant viverra proident
+          scelerisque duis duis et turpis. Integer est condimentum. Suscipit nulla
+          integer. Phasellus facilis vestibulum. Con pellentesque sed. Urna in
+          risus sem fusce suscipit. In sed integer. Imperdiet mauris sit. Pretium
+          vitae in. Fusce et vehicula. Nibh a aliquam. Proin massa posuere. Quis
+          pulvinar vehicula.
+        </p>
+      </div>
+      <div class="section">
+        <amp-img
+          src="https://source.unsplash.com/random/400x300"
+          width="325"
+          height="200"
+          class="img-stack1"
+        ></amp-img>
+        <amp-img
+          src="https://source.unsplash.com/random/200x200"
+          width="150"
+          height="150"
+          class="img-stack2"
+        ></amp-img>
+        <amp-img
+          src="https://source.unsplash.com/random/400x400"
+          width="250"
+          height="200"
+          class="img-stack3"
+        ></amp-img>
+      </div>
     </div>
   </body>
 </html>
